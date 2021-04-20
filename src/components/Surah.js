@@ -1,4 +1,4 @@
-import { surahData } from '../surahData';
+import { surahData } from '../surahData.js';
 import ReactPlayer from 'react-player/youtube'
 
 import '../App.css'

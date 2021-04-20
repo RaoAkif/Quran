@@ -1,4 +1,4 @@
-export const shoesData = {
+export const surahData = {
   "1": {
   "name": "Surah Al Fatihah",
   "link":
