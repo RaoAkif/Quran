@@ -1,12 +1,14 @@
-import Layout from '../components/Layout';
+// import Layout from '../components/Layout';
 import './Home.css';
-import ReactPlayer from 'react-player/youtube'
-
+import Footer from "../components/Footer"
 export const Home = () => {
   return (
-  <Layout title="This is my Home">
-      <ReactPlayer url='https://www.youtube.com/watch?v=hCGVXMFVHCA' />
-  </Layout>
-  )};
+  <div>
 
-export default Home;
+      <Footer />
+  </div>
+  )};
+  
+  export default Home;
+  
+  // <ReactPlayer url='https://www.youtube.com/watch?v=hCGVXMFVHCA' />

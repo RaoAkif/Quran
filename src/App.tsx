@@ -1,11 +1,11 @@
 import './App.css';
-import RouterConfig from "./components/RouterConfig"
+import Home from "./Pages/Home"
 import background from "./images/quran.jpg"
 
 function App() {
   return (
     <div style={{ backgroundImage: `url(${background})` }}>
-      <RouterConfig />
+      <Home />
     </div>
   );
 }
