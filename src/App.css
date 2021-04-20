@@ -28,6 +28,7 @@ nav a {
   padding: 0px 20px;
   color: #fff;
   text-decoration: none;
+  text-decoration-line: none
 }
 
 nav .current > a {
@@ -39,10 +40,18 @@ li {
   text-align: left;
   border-width: 10px;
   margin: grey 10px;
+  text-decoration-line: none;
 }
 
+
+Link ::before{
+  color: black;
+  align-items: left;
+  text-decoration-line: none;
+}
 
 Link ::after{
   color: black;
   align-items: left;
+  text-decoration-line: none;
 }
