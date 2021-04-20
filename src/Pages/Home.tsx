@@ -1,12 +1,13 @@
+import { Link } from 'react-router-dom';
 import './Home.css';
-import Footer from "../components/Footer"
+
 export const Home = () => {
   return (
-  <div>
+    <div className="body-container">
+      <h1>Welcome to Quran Majeed</h1>
+      <Link to="Surahs">Watch Quran Majeed with Urdu Translation</Link>
+    </div>
+  );
+};
 
-      <Footer />
-  </div>
-  )};
-  
-  export default Home;
-  
+export default Home;

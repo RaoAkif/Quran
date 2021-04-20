@@ -1,13 +1,12 @@
-import './App.css';
-import Home from "./Pages/Home"
+import { RouterConfig } from './components/RouterConfig';
+
 
 function App() {
   return (
     <div>
-      <Home />
+      <RouterConfig />
     </div>
   );
 }
 
 export default App;
-
