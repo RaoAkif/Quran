@@ -10,13 +10,13 @@ const Surahs = () => {
         {Object.entries(surahData).map(([id, { name }]) => (
           <li style={{textAlign: 'center', fontFamily:"Jameel Noori Nastaleeq"}} key={id}>
             <Link to={`/Surah/${id}`}>
-              <div style={{width: '50%', margin: 'auto'}}>
+              <div style={{width: '50%', margin: 'none auto'}}>
               <button
               style={{width:"120px", color: 'black', fontSize: '140%', borderRadius: '12px', margin:'20px', fontFamily:"Jameel Noori Nastaleeq" }}
               >
                 {name} 
                 </button>
-              <button style={{ width:"40px", margin:'0px', color:'white', backgroundColor:'#8B4513', textDecorationLine:'none'}}>{id}</button>
+              <button style={{ width:"40px", borderRadius: '5px', margin:'0px', color:'white', backgroundColor:'#8B4513', textDecorationLine:'none'}}>{id}</button>
               </div>
             </Link>
           </li>
