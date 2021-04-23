@@ -41,13 +41,11 @@ export const surahData = {
   },
   11: {
     name: 'ہود',
-    link:
-      'https://www.youtube.com/watch?v=ymtYSnewsNI&list=PLXLJ0Tsrz9yCFDhWVo2Bap9khiOQIdjSA&index=10',
+    link: 'https://www.youtube.com/watch?v=ymtYSnewsNI',
   },
   12: {
     name: 'یوسف',
-    link:
-      'https://www.youtube.com/watch?v=0RVSHV2dEOA&list=PLXLJ0Tsrz9yCFDhWVo2Bap9khiOQIdjSA&index=11',
+    link: 'https://www.youtube.com/watch?v=0RVSHV2dEOA&list=PLXLJ0Tsrz9yCFDhWVo2Bap9khiOQIdjSA&index=11',
   },
   13: {
     name: 'الرعد',
