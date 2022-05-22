@@ -1,6 +1,6 @@
 # Quran App
 
-> This Quran App gets Videos of all thirty Paras of the Holy Quran from YouTube. I made this App for my Father. He wanted to watch a specific Playlist of Holy Quran with ease, because he is not in with the technology devices.
+> This Quran App gets Videos of all thirty Paras of the Holy Quran from YouTube. I made this App for my father. He wanted to watch a specific Playlist of Holy Quran with ease, because he is not in with the technology devices.
 
 
 ## Built With
