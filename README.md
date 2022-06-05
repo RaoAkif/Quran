@@ -13,8 +13,6 @@
 
 [Live Site](https://quranmajeed.netlify.app/)
 
-[Live Demo Link](https://www.loom.com/share/...)
-
 
 ## Getting Started
 To get a local copy up and running follow these simple example steps.
