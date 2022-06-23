@@ -225,7 +225,7 @@ export const surahData = {
   },
   57: {
     name: 'سورہ الحدید',
-    link: 'https://www.youtube.com/watch?v=krlkf36y_4U',
+    link: 'https://www.youtube.com/watch?v=3qBhjVuD82I',
   },
   58: {
     name: 'سورہ المجادلہ',
