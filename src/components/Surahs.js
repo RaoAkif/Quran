@@ -2,7 +2,8 @@ import { Link } from 'react-router-dom';
 import { surahData } from '../surahData';
 import "../App.css"
 import "./SurahShowcase.css"
-import header from '../images/header.PNG';
+import header from '../images/header.svg';
+import circleArt from '../images/number-circle.png';
 
 const Surahs = () => {
   return (
@@ -15,8 +16,11 @@ const Surahs = () => {
               <div className='surah-div'>
                 <p className='surah-en-name' style={{ width:"120px", textDecorationLine:'none', color: 'white', fontSize: '140%', borderRadius: '12px', color: "#032D2B" }}>{en_name}</p>
                 <div style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
-                  <p style={{ width:"120px", textDecorationLine:'none', color: 'white', fontSize: '140%', borderRadius: '12px', margin:'20px', fontFamily:"Jameel Noori Nastaleeq", color: "#032D2B" }}>{name}</p>
-                  <div style={{ padding: '0px', margin:'0px', color:'#032D2B', textDecorationLine:'none' }}>{id}</div>
+                  <p style={{ textDecorationLine:'none', color: 'white', fontSize: '140%', borderRadius: '12px', fontFamily:"Jameel Noori Nastaleeq", color: "#032D2B", padding: '0px 10px 0px 0px' }}>{name}</p>
+                  <div class="container">
+                    <img style={{width: '70px', marginBottom: '0px'}} src={circleArt} alt="Circle-Art" />
+                    <div class="centered" style={{ padding: '0px', margin:'0px', color:'#032D2B', textDecorationLine:'none' }}>{id}</div>
+                  </div>
                 </div>
               </div>
             </Link>
