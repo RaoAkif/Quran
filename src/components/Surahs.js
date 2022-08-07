@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { surahData } from '../surahData';
 import "../App.css"
 import "./SurahShowcase.css"
-import header from '../images/header.svg';
+import header from '../images/header.PNG';
 import circleArt from '../images/number-circle.png';
 
 const Surahs = () => {
