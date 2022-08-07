@@ -2,7 +2,6 @@ import { surahData } from '../surahData.js';
 import ReactPlayer from 'react-player/youtube';
 import { useParams } from 'react-router-dom';
 import '../App.css';
-import './SurahShowcase.css';
 
 const Surah = () => {
   let { id } = useParams();

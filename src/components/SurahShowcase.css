@@ -1,6 +1,28 @@
-
 .react-player {
   position: absolute;
   top: 0;
   left: 0;
 }
+
+img {
+  margin-bottom: 8px;
+}
+
+.surah-div {
+  background-color: white;
+  width: 80vw;
+  margin: auto;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  padding: 8px 20px 8px 30px;
+}
+
+.surah-div > * {
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
+}
+
