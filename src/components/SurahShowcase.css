@@ -14,7 +14,7 @@ img {
   margin: auto;
   border-radius: 5px;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   margin-bottom: 8px;
   padding: 8px 20px 8px 30px;
