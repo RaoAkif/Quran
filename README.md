@@ -2,6 +2,8 @@
 
 > This Quran App gets Videos of all thirty Paras of the Holy Quran from YouTube. I made this App for my father. He wanted to watch a specific Playlist of Holy Quran with ease, because he is not in with the technology devices.
 
+## Rails API
+Connect with [QuranAPI_Rails](https://github.com/RaoAkif/QuranAPI_Rails)
 
 ## Built With
 
