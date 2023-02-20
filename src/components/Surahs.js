@@ -23,19 +23,22 @@ const Surahs = () => {
     localStorage.setItem('checkboxes', JSON.stringify(checkboxes));
   }, [checkboxes]);
 
-  // Function to handle clearing all checkboxes
-  const handleClearAll = () => {
-    const clearedCheckboxes = {};
-    Object.keys(checkboxes).forEach(id => {
-      clearedCheckboxes[id] = false;
-    });
-    setCheckboxes(clearedCheckboxes);
+// Function to clear all checkboxes
+const clearAllCheckboxes = () => {
+  const confirmed = window.confirm("Are you sure you want to clear all checkboxes?");
+  if (confirmed) {
+    const newCheckboxes = {};
+    for (const [id, _] of Object.entries(surahData)) {
+      newCheckboxes[id] = false;
+    }
+    setCheckboxes(newCheckboxes);
   }
+};
 
   return (
     <div style={{ textAlign: 'center', fontFamily: "Jameel Noori Nastaleeq" }}>
       <img style={{ width: "75vw", filter: 'blur(5%)', clipPath: 'inset(1% 1% 1% 1%)' }} src={header} alt="header" />
-      <button style={{ display: 'flex', marginLeft: '3vw', padding: '10px', borderRadius: '5px', marginBottom: '10px' }} onClick={handleClearAll}>Clear All</button>
+      <button style={{ display: 'flex', marginLeft: '3vw', padding: '10px', borderRadius: '5px', marginBottom: '10px' }} onClick={clearAllCheckboxes}>Clear All</button>
       <div>
         {Object.entries(surahData).map(([id, { en_name, name }]) => (
           <li style={{ textAlign: 'center', fontFamily: "Jameel Noori Nastaleeq" }} key={id}>
