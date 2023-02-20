@@ -25,7 +25,9 @@ const Surahs = () => {
 
   return (
     <div style={{ textAlign: 'center', fontFamily: "Jameel Noori Nastaleeq" }}>
-      <img style={{ width: "75vw" }} src={header} alt="header" />
+      <img style={{ width: "75vw", filter: 'blur(5%)', clipPath: 'inset(1% 1% 1% 1%)' }} src={header} alt="header" />
+      {/* <button style={{ position: 'relative', margin: '0 auto 40px auto', top: '25px', padding: '10px', borderRadius: '5px'}}>Clear All</button> */}
+      <button style={{ display: 'flex', marginLeft: '3vw', padding: '10px', borderRadius: '5px', marginBottom: '10px' }}>Clear All</button>
       <div>
         {Object.entries(surahData).map(([id, { en_name, name }]) => (
           <li style={{ textAlign: 'center', fontFamily: "Jameel Noori Nastaleeq" }} key={id}>
