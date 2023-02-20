@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { surahData } from '../surahData';
 import "../App.css"
 import "./SurahShowcase.css"
-import header from '../images/header.png';
+import header from '../images/header.jpg';
 import circleArt from '../images/number-circle.png';
 import { useState, useEffect } from 'react';
 
