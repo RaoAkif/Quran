@@ -66,7 +66,7 @@ const Surahs = () => {
               <input
                 type="checkbox"
                 style={{ width: '20px', height: '20px', color: '#032D2B' }}
-                checked={checkboxes[id]}
+                checked={checkboxes[id] || ''}
                 onChange={event => {
                   const checkboxValue = event.target.checked;
                   setCheckboxes(prevCheckboxes => ({
