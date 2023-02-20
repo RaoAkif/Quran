@@ -44,13 +44,48 @@ li {
 
 
 Link ::before{
-  color: black;
+  color: #032D2B;
   align-items: left;
   text-decoration-line: none;
 }
 
 Link ::after{
-  color: black;
+  color: #032D2B;
   align-items: left;
   text-decoration-line: none;
+}
+
+/* Set the fill color of the checkbox when checked */
+input[type="checkbox"]:checked {
+  background-color: #032D2B;
+  border-radius: 4px;
+}
+
+/* Hide the default checkbox appearance */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  height: 20px;
+  width: 20px;
+  border: 1px solid #032D2B;
+  border-radius: 4px;
+}
+
+/* Style the tick mark inside the checkbox */
+input[type="checkbox"]:checked::before {
+  content: '\2714'; /* Unicode character for a tick mark */
+  padding-left: 2px;
+  display: block;
+  text-align: center;
+  line-height: 20px;
+  color: #FFFFFF;
+  font-size: 16px;
+  border-radius: 4px;
+}
+/* Style the label for the checkbox */
+label {
+  font-size: 18px;
+  font-family: sans-serif;
+  margin-left: 10px;
 }
