@@ -1,18 +1,21 @@
-import { surahData } from '../surahData.js';
+// import { surahData } from '../surahData.js';
+import { parasData } from '../parasData.js';
 import ReactPlayer from 'react-player/youtube';
 import { useParams } from 'react-router-dom';
 import '../App.css';
 
 const Surah = () => {
   let { id } = useParams();
-  let surah = surahData[id];
+  // let surah = surahData[id];
+  let para = parasData[id];
 
   return (
     <div style={{ margin: 'auto', width: '50%', padding: '10px' }}>
       {/* <h2 style={{textAlign: 'center', fontFamily:"Jameel Noori Nastaleeq"}}>{surah.name}</h2> */}
       <ReactPlayer
         className="react-player"
-        url={surah.link}
+        // url={surah.link}
+        url={para.link}
         controls="true"
         playing="false"
         pip="true"

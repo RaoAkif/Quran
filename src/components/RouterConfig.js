@@ -10,8 +10,10 @@ export const RouterConfig = () => {
     <Router>
     <Switch>
       <Route exact path="/"><Home /></Route>
-      <Route exact path="/Surahs"><Surahs /></Route>
-      <Route exact path="/Surah/:id"><SurahShowcase /></Route>
+      {/* <Route exact path="/Surahs"><Surahs /></Route> */}
+      {/* <Route exact path="/Surah/:id"><SurahShowcase /></Route> */}
+      <Route exact path="/Paras"><Surahs /></Route>
+      <Route exact path="/Para/:id"><SurahShowcase /></Route>
     </Switch>
   </Router>
   );
