@@ -1,11 +1,11 @@
-import { surahData } from '../../surahData.js';
+import { paraData } from '../../paraData.js';
 import ReactPlayer from 'react-player/youtube';
 import { useParams } from 'react-router-dom';
 import '../App.css';
 
 const Surah = () => {
   let { id } = useParams();
-  let surah = surahData[id];
+  let surah = paraData[id];
 
   return (
     <div style={{ margin: 'auto', width: '50%', padding: '10px' }}>

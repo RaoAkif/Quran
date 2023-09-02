@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { surahData } from '../../surahData';
+import { paraData } from '../../paraData';
 import "../App.css";
 import "./SurahShowcase.css";
 import header from '../assets/images/header.jpg';
@@ -60,7 +60,7 @@ const Surahs = () => {
       <img style={{width: "100vw"}} src={header} alt="header" />
       <button style={{ display: 'flex', marginLeft: '3vw', padding: '10px', borderRadius: '5px', border: 'none', marginBottom: '10px' }} onClick={handleClearAll}>Clear All</button>
       <div>
-        {Object.entries(surahData).map(([id, { en_name, name }]) => (
+        {Object.entries(paraData).map(([id, { name }]) => (
           <li style={{ textAlign: 'center', fontFamily: "Jameel Noori Nastaleeq" }} key={id}>
             <div className='surah-div' style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
               <input
