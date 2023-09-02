@@ -1,56 +1,8 @@
-# Quran App
+# React + Vite
 
-> This Quran App gets Videos of all thirty Paras of the Holy Quran from YouTube. I made this App for my father. He wanted to watch a specific Playlist of Holy Quran with ease, because he is not in with the technology devices.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Using external API
-Rails Quran API fetching implementation is at [fetch-data_from_rails-api](https://github.com/RaoAkif/Quran/tree/fetch-data_from_rails-api) branch
+Currently, two official plugins are available:
 
-## Built With
-
-- HTML, CSS, JS
-- Bootstrap
-- React JS
-
-## Live Demo
-
-[Live Site](https://quranmajeed.netlify.app/)
-
-
-## Getting Started
-To get a local copy up and running follow these simple example steps.
-
-### Setup
-- Clone the Repo
-- Open on local Server
-
-### Deployment
-Deploy on Netlify (Not Decided Yet)
-
-
-## Authors
-
-👤 **Author**
-
-- GitHub: [@githubhandle](https://github.com/RaoAkif)
-- Twitter: [@twitterhandle](https://twitter.com/RaoAkif)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/RaoAkif)
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
-Feel free to check the [issues page](../../issues/).
-
-## Show your support
-
-Give a ⭐️ if you like this project!
-
-## Acknowledgments
-
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
-
-## 📝 License
-
-This project is [MIT](./MIT.md) licensed.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh

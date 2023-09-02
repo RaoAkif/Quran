@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import { surahData } from '../surahData';
+import { surahData } from '../../surahData';
 import "../App.css";
 import "./SurahShowcase.css";
-import header from '../images/header.jpg';
-import circleArt from '../images/number-circle.png';
+import header from '../assets/images/header.jpg';
+import circleArt from '../assets/images/number-circle.png';
 import { useState, useEffect } from 'react';
 
 const Surahs = () => {
@@ -75,7 +75,7 @@ const Surahs = () => {
                   }));
                 }}
               />
-              <Link to={`/Surah/${id}`} style={{ textDecoration: 'none' }}>
+              <Link to={`/Surahs/${id}`} style={{ textDecoration: 'none' }}>
                 <div style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                   <p style={{ textDecorationLine: 'none', fontSize: '140%', borderRadius: '12px', border: 'none', fontFamily: "Jameel Noori Nastaleeq", color: "#032D2B", padding: '0px 20px 0px 0px' }}>{name}</p>
                   <div className="container">

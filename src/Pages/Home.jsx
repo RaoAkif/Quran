@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
-import splash from '../images/splash.png';
+import splash from '../assets/images/splash.png';
 
 export const Home = () => {
   return (
