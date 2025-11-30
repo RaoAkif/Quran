@@ -1,6 +1,6 @@
 export const paraData = {
     1: {
-      name: 'آلم',
+      name: 'الم',
       en_name: 'Alif-laam-meem',
       link: 'https://www.youtube.com/watch?v=dXxh8tmUimc',
     },
