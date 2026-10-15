@@ -1,46 +1,8 @@
-.react-player {
+/* Surah Showcase Specific Styles */
+.react-player-responsive {
   position: absolute;
   top: 0;
   left: 0;
-}
-
-img {
-  margin-bottom: 8px;
-}
-
-.surah-div {
-  background-color: white;
-  width: 80vw;
-  margin: auto;
-  border-radius: 5px;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  margin-bottom: 8px;
-  padding: 8px 20px 8px 30px;
-  font-size: 15px;
-}
-
-.surah-div > * {
-  display: flex;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-.surah-en-name {
-  margin: 0;
-}
-
-.container {
-  position: relative;
-  text-align: center;
-  color: white;
-  display: flex;
-}
-
-.centered {
-  position: absolute;
-  top: 48%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  width: 100% !important;
+  height: 100% !important;
 }

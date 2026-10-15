@@ -8,10 +8,11 @@ export const RouterConfig = () => {
   return (
       <Routes>
         <Route path="/" element={<Home />} />
-          <Route path="Surahs">
-            <Route index element={<Surahs />} />
-            <Route path=":id" element={<SurahShowcase />} />
-          </Route>
+        <Route path="Surahs">
+          <Route index element={<Surahs />} />
+          <Route path=":id" element={<SurahShowcase />} />
+        </Route>
+        <Route path="*" element={<Home />} />
       </Routes>
   );
 };

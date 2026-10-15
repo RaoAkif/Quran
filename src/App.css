@@ -1,91 +1,107 @@
-body {
-  background: #032D2B;
-  font-family: Arial, Helvetica, sans-serif;
-  line-height: 1.5;
-  margin: 0;
-}
+/* App-wide Islamic Styling & Components */
 
-
-main {
-  padding: 2rem;
-}
-
-nav {
-  background: #444;
-  padding: 0.1px 2rem;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
+.app-viewport {
+  min-height: 100vh;
   display: flex;
-  align-items: center;
-  justify-content: center
+  flex-direction: column;
+  position: relative;
+  background-color: var(--color-burgundy-950);
 }
 
-nav a {
-  padding: 0px 20px;
-  color: #fff;
-  text-decoration: none;
-  text-decoration-line: none
+.main-content {
+  flex: 1;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
 }
 
-nav .current > a {
-  color: yellow;
+/* Subtle gold radiance animation */
+@keyframes goldPulse {
+  0% {
+    box-shadow: 0 0 15px rgba(223, 183, 108, 0.25), 0 0 30px rgba(116, 17, 34, 0.4);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 0 28px rgba(223, 183, 108, 0.5), 0 0 50px rgba(116, 17, 34, 0.7);
+    transform: scale(1.02);
+  }
+  100% {
+    box-shadow: 0 0 15px rgba(223, 183, 108, 0.25), 0 0 30px rgba(116, 17, 34, 0.4);
+    transform: scale(1);
+  }
 }
 
-li {
-  list-style-type: none;
-  text-align: left;
-  border-width: 10px;
-  margin: grey 10px;
-  text-decoration-line: none;
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
 }
 
-
-Link ::before{
-  color: #032D2B;
-  align-items: left;
-  text-decoration-line: none;
+.animate-gold-pulse {
+  animation: goldPulse 4s ease-in-out infinite;
 }
 
-Link ::after{
-  color: #032D2B;
-  align-items: left;
-  text-decoration-line: none;
+.animate-gentle-float {
+  animation: gentleFloat 5s ease-in-out infinite;
 }
 
-/* Set the fill color of the checkbox when checked */
-input[type="checkbox"]:checked {
-  background-color: #032D2B;
-  border-radius: 4px;
+/* Islamic Mihrab Arch Frame */
+.islamic-arch-border {
+  border: 1px solid rgba(223, 183, 108, 0.3);
+  position: relative;
+  background: radial-gradient(ellipse at 50% 20%, rgba(93, 13, 27, 0.8) 0%, rgba(31, 3, 8, 0.95) 100%);
+  border-radius: 24px;
 }
 
-/* Hide the default checkbox appearance */
-input[type="checkbox"] {
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  height: 20px;
-  width: 20px;
-  border: 1px solid #032D2B;
-  border-radius: 4px;
+/* Ornate Gold Hairline Divider */
+.gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(223, 183, 108, 0.6) 50%, transparent);
+  margin: 1rem 0;
+  border: none;
 }
 
-/* Style the tick mark inside the checkbox */
-input[type="checkbox"]:checked::before {
-  content: '\2714'; /* Unicode character for a tick mark */
-  padding-left: 2px;
-  display: block;
-  text-align: center;
-  line-height: 20px;
-  color: #FFFFFF;
-  font-size: 16px;
-  border-radius: 4px;
+/* High contrast touch card for elderly users */
+.touch-card {
+  transition: transform 0.18s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+  user-select: none;
 }
-/* Style the label for the checkbox */
-label {
-  font-size: 18px;
-  font-family: sans-serif;
-  margin-left: 10px;
+
+.touch-card:active {
+  transform: scale(0.985);
+}
+
+/* Video Player Wrapper */
+.video-responsive-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+  background: #000000;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(223, 183, 108, 0.35);
+}
+
+.video-responsive-container > div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Landscape Mode for Video Fullscreen on Mobile */
+.landscape-mode {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 9999 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
 }

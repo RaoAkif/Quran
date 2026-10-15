@@ -28,11 +28,15 @@ const manifestForPlugIn = {
     ],
     start_url: '/',
     display: 'standalone',
-    theme_color: '#000000',
-    background_color: '#ffffff'
+    theme_color: '#4a0914',
+    background_color: '#38060e'
   }
 }
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), VitePWA(manifestForPlugIn)],
+  server: {
+    host: '0.0.0.0',
+    port: 3000,
+  },
 })

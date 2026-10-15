@@ -1,0 +1,8 @@
+{
+  "name": "القرآن الکریم",
+  "description": "القرآن الکریم - عربی مع اردو ترجمہ",
+  "permissions": [],
+  "capabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
