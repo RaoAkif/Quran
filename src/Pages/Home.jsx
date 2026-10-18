@@ -95,7 +95,8 @@ export const Home = () => {
             WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent',
             textShadow: '0 4px 20px rgba(0,0,0,0.8)',
-            lineHeight: 1.25,
+            lineHeight: 1.4,
+            padding: '0.12em 0',
           }}
         >
           القرآن الکریم
@@ -196,7 +197,7 @@ export const Home = () => {
             }}
           >
             وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا
-            <div style={{ fontSize: '0.78rem', opacity: 0.85, marginTop: '2px', fontFamily: "'Noto Nastaliq Urdu', serif" }}>
+            <div style={{ fontSize: '0.78rem', opacity: 0.85, marginTop: '6px', fontFamily: "'Noto Nastaliq Urdu', serif", lineHeight: 1.5 }}>
               (اور قرآن کو خوب ٹھہر ٹھہر کر پڑھا کرو)
             </div>
           </div>
@@ -314,53 +315,93 @@ export const Home = () => {
             className="touch-card"
             style={{
               width: '100%',
+              maxWidth: '380px',
               marginTop: '1.25rem',
               background: 'linear-gradient(135deg, rgba(88, 12, 24, 0.95), rgba(45, 5, 12, 0.95))',
-              border: '1px solid rgba(223, 183, 108, 0.5)',
+              border: '1.5px solid rgba(223, 183, 108, 0.45)',
               borderRadius: '16px',
               padding: '0.9rem 1.25rem',
               display: 'flex',
               alignItems: 'center',
               cursor: 'pointer',
-              boxShadow: '0 8px 24px rgba(0,0,0,0.5)',
+              boxShadow: '0 8px 24px rgba(0,0,0,0.55), inset 0 1px 0 rgba(223, 183, 108, 0.25)',
               direction: 'rtl',
             }}
           >
-            <div style={{ display: 'flex', alignItems: 'center', gap: '14px', width: '100%' }}>
-              {/* Play Button: Vertically centered with arrow pointing left for RTL */}
+            <div
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'space-between',
+                width: '100%',
+                gap: '16px',
+                direction: 'rtl',
+              }}
+            >
+              {/* Right side in RTL: Subtitle and Para Number */}
               <div
                 style={{
-                  width: '44px',
-                  height: '44px',
+                  textAlign: 'right',
+                  flex: 1,
+                  minWidth: 0,
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: '0.9rem',
+                    color: '#dfb76c',
+                    fontFamily: "'Noto Nastaliq Urdu', serif",
+                    lineHeight: 1.6,
+                    paddingTop: '2px',
+                  }}
+                >
+                  جہاں سے چھوڑا تھا، وہیں سے شروع کریں
+                </div>
+                <div
+                  style={{
+                    fontSize: '1.45rem',
+                    color: '#ffffff',
+                    fontWeight: 700,
+                    fontFamily: "'Noto Nastaliq Urdu', 'Amiri', serif",
+                    lineHeight: 1.45,
+                    marginTop: '2px',
+                    paddingBottom: '2px',
+                    textShadow: '0 2px 8px rgba(0,0,0,0.7)',
+                  }}
+                >
+                  پارہ نمبر {lastPlayed.id}
+                </div>
+              </div>
+
+              {/* Left side in RTL: Yellow player with left-pointing play arrow */}
+              <div
+                style={{
+                  width: '48px',
+                  height: '48px',
+                  minWidth: '48px',
                   borderRadius: '50%',
-                  background: 'linear-gradient(135deg, #dfb76c, #a87922)',
+                  background: 'linear-gradient(135deg, #f5dc93 0%, #dfb76c 50%, #b88628 100%)',
+                  border: '2px solid rgba(255, 248, 220, 0.85)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   color: '#2a040b',
-                  boxShadow: '0 2px 8px rgba(0,0,0,0.4)',
+                  boxShadow: '0 4px 14px rgba(0,0,0,0.45), 0 0 12px rgba(223, 183, 108, 0.35)',
                   flexShrink: 0,
                 }}
               >
                 <svg
-                  width="16"
-                  height="16"
+                  width="20"
+                  height="20"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  style={{ display: 'block', transform: 'translateX(-1px)' }}
+                  style={{ display: 'block' }}
                 >
-                  <path d="M16 5l-10 7 10 7V5z" />
+                  <path d="M16 6l-9 6 9 6V6z" />
                 </svg>
-              </div>
-
-              {/* Subtitle and Name */}
-              <div style={{ textAlign: 'right' }}>
-                <div style={{ fontSize: '0.85rem', color: '#dfb76c', fontFamily: "'Noto Nastaliq Urdu', serif", lineHeight: 1.3 }}>
-                  جہاں سے چھوڑا تھا
-                </div>
-                <div style={{ fontSize: '1.45rem', color: '#ffffff', fontWeight: 700, fontFamily: "'Amiri', serif", lineHeight: 1.25, marginTop: '2px' }}>
-                  {lastPlayed.name}
-                </div>
               </div>
             </div>
           </div>

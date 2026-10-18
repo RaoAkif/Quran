@@ -77,6 +77,12 @@ html, body {
 button {
   font-family: inherit;
   cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+}
+
+input::placeholder {
+  color: rgba(223, 183, 108, 0.65);
+  font-family: 'Noto Nastaliq Urdu', 'Amiri', serif;
 }
 
 a {

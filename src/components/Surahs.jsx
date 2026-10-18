@@ -106,15 +106,16 @@ const Surahs = () => {
           backdropFilter: 'blur(12px)',
           borderBottom: '1px solid rgba(223, 183, 108, 0.3)',
           padding: '0.65rem 1rem',
-          display: 'flex',
+          display: 'grid',
+          gridTemplateColumns: 'minmax(90px, auto) 1fr minmax(90px, auto)',
           alignItems: 'center',
-          justifyContent: 'space-between',
           maxWidth: '900px',
           width: '100%',
           margin: '0 auto',
+          boxSizing: 'border-box',
         }}
       >
-        {/* Right side: Back to Home Button (44px min tap target) */}
+        {/* Right side in RTL: Back to Home Button (44px min tap target) */}
         <Link
           to="/"
           style={{
@@ -130,17 +131,19 @@ const Surahs = () => {
             color: '#f5dc93',
             fontSize: '0.95rem',
             fontFamily: "'Noto Nastaliq Urdu', serif",
+            lineHeight: 1.2,
             gap: '8px',
             textDecoration: 'none',
+            justifySelf: 'start',
           }}
           aria-label="ہوم اسکرین پر واپس جائیں"
         >
-          <span style={{ fontSize: '1.2rem' }}>⌂</span>
-          <span>شروعات</span>
+          <span style={{ fontSize: '1.2rem', lineHeight: 1 }}>⌂</span>
+          <span style={{ lineHeight: 1 }}>شروعات</span>
         </Link>
 
-        {/* Center: Title */}
-        <div style={{ textAlign: 'center' }}>
+        {/* Center: Title (Mathematically centered, ample line-height so diacritics never clip) */}
+        <div style={{ textAlign: 'center', padding: '0 8px', justifySelf: 'center' }}>
           <h1
             style={{
               margin: 0,
@@ -148,7 +151,8 @@ const Surahs = () => {
               fontSize: '1.45rem',
               fontWeight: 700,
               color: '#dfb76c',
-              lineHeight: 1.1,
+              lineHeight: 1.35,
+              paddingTop: '2px',
             }}
           >
             القرآن الکریم
@@ -158,16 +162,21 @@ const Surahs = () => {
               fontSize: '0.78rem',
               color: '#d1b88e',
               fontFamily: "'Noto Nastaliq Urdu', serif",
+              lineHeight: 1.35,
+              display: 'block',
             }}
           >
             عربی مع اردو ترجمہ
           </span>
         </div>
 
-        {/* Left side: Clear All Marks Trigger */}
+        {/* Left side in RTL: Clear All Marks Trigger */}
         <button
           onClick={() => setShowClearModal(true)}
           style={{
+            display: 'inline-flex',
+            alignItems: 'center',
+            justifyContent: 'center',
             minWidth: '44px',
             minHeight: '44px',
             padding: '0 12px',
@@ -177,7 +186,9 @@ const Surahs = () => {
             color: '#f5dc93',
             fontSize: '0.85rem',
             fontFamily: "'Noto Nastaliq Urdu', serif",
+            lineHeight: 1.2,
             cursor: 'pointer',
+            justifySelf: 'end',
           }}
           title="تمام نشانات صاف کریں"
         >
@@ -222,16 +233,6 @@ const Surahs = () => {
               textAlign: 'center',
             }}
           >
-            <div
-              style={{
-                fontFamily: "'Amiri', serif",
-                color: '#fff3c7',
-                fontSize: '1.25rem',
-                textShadow: '0 2px 8px rgba(0,0,0,0.9)',
-              }}
-            >
-              بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-            </div>
           </div>
         </div>
 
@@ -353,6 +354,11 @@ const Surahs = () => {
                 fontSize: '1.2rem',
                 fontWeight: 700,
                 fontFamily: "'Amiri', 'Noto Nastaliq Urdu', serif",
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                lineHeight: 1.2,
+                padding: '4px 8px',
                 transition: 'all 0.2s ease',
               }}
             >
@@ -372,6 +378,11 @@ const Surahs = () => {
                 fontSize: '1.2rem',
                 fontWeight: 700,
                 fontFamily: "'Amiri', 'Noto Nastaliq Urdu', serif",
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                lineHeight: 1.2,
+                padding: '4px 8px',
                 transition: 'all 0.2s ease',
               }}
             >
@@ -398,6 +409,7 @@ const Surahs = () => {
               color: '#ffffff',
               fontSize: '1.05rem',
               fontFamily: "'Noto Nastaliq Urdu', 'Amiri', serif",
+              lineHeight: 'normal',
               outline: 'none',
               boxSizing: 'border-box',
               textAlign: 'right',
@@ -484,8 +496,8 @@ const Surahs = () => {
                   alignItems: 'center',
                   justifyContent: 'space-between',
                   direction: 'rtl',
-                  padding: '14px 20px',
-                  minHeight: '82px',
+                  padding: '16px 20px',
+                  minHeight: '88px',
                   borderRadius: '16px',
                   backgroundColor: isCompleted ? '#faf6ec' : '#fffdfa',
                   border: isCompleted
@@ -495,6 +507,7 @@ const Surahs = () => {
                   cursor: 'pointer',
                   position: 'relative',
                   gap: '16px',
+                  boxSizing: 'border-box',
                 }}
               >
                 {/* 1. RIGHT SLOT (Start of RTL): Pure Vector SVG Islamic Ayah Rosette */}
@@ -519,7 +532,7 @@ const Surahs = () => {
                     display: 'flex',
                     alignItems: 'center',
                     gap: '16px',
-                    padding: '0 12px',
+                    padding: '0 8px',
                     minWidth: 0,
                   }}
                 >
@@ -527,12 +540,13 @@ const Surahs = () => {
                   <span
                     style={{
                       fontFamily: "'Amiri', 'Scheherazade New', serif",
-                      fontSize: '2rem',
+                      fontSize: 'clamp(1.5rem, 4.5vw, 1.95rem)',
                       fontWeight: 700,
                       color: '#2d040a',
-                      lineHeight: 1.5,
+                      lineHeight: 1.45,
                       display: 'inline-block',
                       whiteSpace: 'nowrap',
+                      padding: '4px 0',
                     }}
                   >
                     {item.name}
@@ -691,6 +705,11 @@ const Surahs = () => {
                   fontSize: '1.1rem',
                   fontWeight: 700,
                   fontFamily: "'Amiri', 'Noto Nastaliq Urdu', serif",
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  lineHeight: 1.2,
+                  padding: '6px 12px',
                 }}
               >
                 ہاں، ری سیٹ کریں
@@ -706,6 +725,11 @@ const Surahs = () => {
                   fontSize: '1.1rem',
                   fontWeight: 600,
                   fontFamily: "'Amiri', 'Noto Nastaliq Urdu', serif",
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  lineHeight: 1.2,
+                  padding: '6px 12px',
                 }}
               >
                 نہیں، منسوخ کریں

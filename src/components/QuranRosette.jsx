@@ -131,7 +131,7 @@ export const QuranRosette = ({
           {/* Perfectly centered, balanced numeral */}
           <text
             x="50"
-            y="52"
+            y="50.5"
             textAnchor="middle"
             dominantBaseline="central"
             fill="#fff3cb"

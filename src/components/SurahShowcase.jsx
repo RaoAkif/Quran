@@ -113,12 +113,13 @@ const SurahShowcase = () => {
           backdropFilter: 'blur(12px)',
           borderBottom: '1px solid rgba(223, 183, 108, 0.3)',
           padding: '0.6rem 1rem',
-          display: 'flex',
+          display: 'grid',
+          gridTemplateColumns: 'minmax(78px, auto) 1fr minmax(78px, auto)',
           alignItems: 'center',
-          justifyContent: 'space-between',
           maxWidth: '900px',
           width: '100%',
           margin: '0 auto',
+          boxSizing: 'border-box',
         }}
       >
         {/* Back Button (44px min tap) */}
@@ -137,38 +138,40 @@ const SurahShowcase = () => {
             color: '#f5dc93',
             fontSize: '0.95rem',
             fontFamily: "'Noto Nastaliq Urdu', serif",
+            lineHeight: 1.2,
             gap: '6px',
             textDecoration: 'none',
+            justifySelf: 'start',
           }}
           aria-label="فہرست پر واپس جائیں"
         >
-          <span style={{ fontSize: '1.2rem' }}>←</span>
-          <span>فہرست</span>
+          <span style={{ fontSize: '1.2rem', lineHeight: 1 }}>←</span>
+          <span style={{ lineHeight: 1 }}>فہرست</span>
         </Link>
 
-        {/* Center Title */}
-        <div style={{ textAlign: 'center', padding: '0 8px', overflow: 'hidden' }}>
+        {/* Center Title: Perfectly centered, unclipped calligraphy */}
+        <div style={{ textAlign: 'center', padding: '0 8px', justifySelf: 'center' }}>
           <div
             style={{
               fontFamily: "'Amiri', serif",
-              fontSize: '1.25rem',
+              fontSize: '1.3rem',
               fontWeight: 700,
               color: '#dfb76c',
-              whiteSpace: 'nowrap',
-              textOverflow: 'ellipsis',
-              overflow: 'hidden',
+              lineHeight: 1.35,
+              paddingTop: '2px',
             }}
           >
-            {currentItem ? currentItem.name : 'تلاوتِ قرآن'}
+            {currentItem ? currentItem.name : 'القرآن الکریم'}
           </div>
           <div
             style={{
               fontSize: '0.78rem',
               color: '#e2cfab',
               fontFamily: "'Noto Nastaliq Urdu', serif",
+              lineHeight: 1.35,
             }}
           >
-            القرآن الکریم
+            {isSurah ? `سورت ${numericId}` : `پارہ نمبر ${numericId}`}
           </div>
         </div>
 
@@ -181,12 +184,15 @@ const SurahShowcase = () => {
             justifyContent: 'center',
             minWidth: '44px',
             minHeight: '44px',
+            padding: '0 12px',
             borderRadius: '10px',
             background: 'rgba(223, 183, 108, 0.15)',
             border: '1px solid rgba(223, 183, 108, 0.35)',
             color: '#f5dc93',
-            fontSize: '1.1rem',
+            fontSize: '1.2rem',
+            lineHeight: 1,
             textDecoration: 'none',
+            justifySelf: 'end',
           }}
           title="ہوم اسکرین"
         >
@@ -237,7 +243,9 @@ const SurahShowcase = () => {
                     fontSize: '1.9rem',
                     color: '#ffffff',
                     fontWeight: 700,
-                    lineHeight: 1.3,
+                    lineHeight: 1.5,
+                    padding: '4px 0',
+                    display: 'inline-block',
                   }}
                 >
                   {currentItem.name}
@@ -257,9 +265,11 @@ const SurahShowcase = () => {
                   color: isCompleted ? '#f5dc93' : '#e0cfb8',
                   fontSize: '0.9rem',
                   fontFamily: "'Noto Nastaliq Urdu', serif",
+                  lineHeight: 1.2,
                   cursor: 'pointer',
-                  display: 'flex',
+                  display: 'inline-flex',
                   alignItems: 'center',
+                  justifyContent: 'center',
                   gap: '6px',
                 }}
               >
@@ -323,8 +333,8 @@ const SurahShowcase = () => {
                   gap: '8px',
                 }}
               >
+                <span style={{ fontSize: '1.2rem', lineHeight: 1 }}>→</span>
                 <span>{isSurah ? 'پچھلی سورت' : 'پچھلا پارہ'}</span>
-                <span>→</span>
               </button>
 
               {/* Next Para Button */}
@@ -350,8 +360,8 @@ const SurahShowcase = () => {
                   gap: '8px',
                 }}
               >
-                <span>←</span>
                 <span>{isSurah ? 'اگلی سورت' : 'اگلا پارہ'}</span>
+                <span style={{ fontSize: '1.2rem', lineHeight: 1 }}>←</span>
               </button>
             </div>
 
@@ -366,7 +376,7 @@ const SurahShowcase = () => {
                 color: '#d6c19c',
                 fontSize: '0.88rem',
                 fontFamily: "'Noto Nastaliq Urdu', serif",
-                lineHeight: 1.6,
+                lineHeight: 1.95,
                 textAlign: 'center',
               }}
             >
